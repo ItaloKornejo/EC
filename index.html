@@ -5,21 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>crud</title>
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <h2 class="container__title">Tienda de Kupper</h2>
+    <div class="navbar">
+        <div class="titleNavbar">
+            <img src="./logo-EC_mobile.png" alt="" id="titleImgMobile">
+            <i class='bx bx-menu' id="menuMobile"></i>
+            <img src="./logo-EC.png" alt="" id="titleImgWeb">
+           
+            
+        </div>
+        <div class="menuNavbar">
+            <ul class="navbar-items">
+                <li class="nav-item"><a href="#newsBooks">Novedades</a></li>
+                <li class="nav-item"><a href="#container">Books</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="newsBooks" id="newsBooks">
+            <div class="swiper projectSwiper">
+                <p id="coming_books">Novedades</p>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./coming1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./coming2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./coming3.png" alt="">
+                    </div>
+                </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+    <div class="container" id="container">
+        <div class="containerTitleBook"> 
+            <hr>
+            <h2 class="container__title">Books</h2>
+            <hr>
+        </div>
         <div class="content_book"></div>
         <div class="cart">
             <div class='cartIcon'>
                 <span id="totalCart"></span>
-                <i class='bx bx-cart-alt' id="icon_cart"></i>
+                <i class='bx bx-shopping-bag' id="icon_cart"></i>
             </div>
-            <i></i>
         </div>
         
     </div>
@@ -27,12 +67,31 @@
     <div class="content_cart" id="contentCart">
         <div class="content_cart-body"></div>
         <div class="content_cart-total">
-            <h3>Total: <span id="total"></span></h3>
+            <h3>Total: S/ <span id="total"></span></h3>
+            <div class="payNow"><p>Pagar ahora</p><i class='bx bx-money-withdraw' ></i></div>
         </div>
     </div>
+    <div class="contact" id="contact">
+        <div class="contact-info">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4640.052473655068!2d-77.08415606470818!3d-12.057037610017833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c946680d0099%3A0xc6def8804064a4e9!2sUniversidad%20Nacional%20Mayor%20de%20San%20Marcos!5e0!3m2!1ses-419!2spe!4v1662618978040!5m2!1ses-419!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="gmap"></iframe>
+            <div class="contact-detail">
+                <p id="titleContact">Contactanos</p>
+                <p><span>Direccion: </span>Av. Colonial 1234 </p>
+                <p><span>Celular: </span>+51 963 596 642 </p>
+                <p><span>Email: </span>books@fake.com </p>
 
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <span>Hecho por Italo con </span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script src="./main.js" type="module"></script>
 </body>
 
 </html>
+

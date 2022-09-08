@@ -11,13 +11,14 @@ function printBookInCart(elementHTML) {
                 <div class="item_cart-img">
                     <img src="${urlImages}" alt="">
                 </div>
-
-                <h4 class="item_cart-title">${name}</h4>
-                <div class="item_cart-options" id="${id}">
-                    <i class='bx bx-minus'></i>
-                    <span id="amount">${amount}</span>
-                    <i class='bx bx-plus-medical'></i>
-                    <i class='bx bx-trash'></i>
+                <div class="item_cart_info">
+                    <h4 class="item_cart-title">${name}</h4>
+                    <div class="item_cart-options" id="${id}">
+                        <i class='bx bx-minus'></i>
+                        <span id="amount">${amount}</span>
+                        <i class='bx bx-plus-medical'></i>
+                        <i class='bx bx-trash'></i>
+                    </div>
                 </div>
             </div>
         `;
@@ -36,10 +37,14 @@ function printBook(elementHTML, data) {
                     <img src="${urlImages}" alt="${name}">
                 </div>
                 <div class="book__body" id="${id}">
-                    <h2 class="book__body-title">${name}</h2>
-                    <p>precio: ${price}</p>
-                    <p>stock: ${stock}</p>
-                    <button class="btn btn__add">Agregar</button>
+                    <h4 class="book__body-title">${name}</h4>
+                    <p id="autorBook">${autor}</p>
+                    <p id="categoryBook">${category}</p>
+                    <div class="book_info">
+                    <span>Stock: ${stock}</span>
+                    <span>S/ ${price}</span>
+                    </div>
+                    <button class="btn btn__add">Comprar</button>
                 </div>
             </div>
         `;}

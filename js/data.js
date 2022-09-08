@@ -100,7 +100,7 @@ export const dataDB = [
     },
     {
         id: 4,
-        name:'Pizarro, el rey de la baraja',
+        name:'Pizarro',
         autor:'Alan Garcia',
         category:'Ensayo',
         year:2022,
@@ -166,7 +166,7 @@ export const dataDB = [
     },
     {
         id: 10,
-        name:'El futuro de la humanidad',
+        name:'Futuro de la humanidad',
         autor:'Michio Kaku',
         category:'Ciencia',
         year:2019,

@@ -2,6 +2,9 @@ import { dataDB } from "./js/data.js";
 import { printBook, printBookInCart, cart } from "./js/layout.js";
 import "./js/showCart.js";
 
+
+
+
 const contentBook = document.querySelector(".content_book");
 const contentCartBody = document.querySelector(".content_cart-body");
 
@@ -107,5 +110,51 @@ contentCartBody.addEventListener("click", (e) => {
 
 printBook(contentBook, dataDB);
 
+const iconMenu = document.querySelector('#menuMobile');
+const contMenu = document.querySelector('.menuNavbar');
 
-// printFoodX(contentFood, dataDB);
+iconMenu.addEventListener("click", (e) => {
+	console.log(contMenu);
+	contMenu.classList.toggle("menuNavbar-show");
+});
+
+
+var swiper = new Swiper('.swiper', {
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev'
+	},  
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+	// freeMode: true,
+	// init: false,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+
+  
+	breakpoints: {
+		350: {
+			slidesPerView:1,
+			spaceBetween: 20,
+		},
+		
+	  	550: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+	  	},
+	  	680: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+	  	},
+	  	920: {
+			slidesPerView: 1,
+			spaceBetween: 40,
+	  	},
+	 	1240: {
+			slidesPerView:1,
+			spaceBetween: 40,
+	  },
+	} 
+    });
